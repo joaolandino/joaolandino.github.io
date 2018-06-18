@@ -15,7 +15,7 @@ const gulp = require('gulp'),
 var isProduction = args.env === 'prod';
 
 const dirDevelopment = 'src/',
-      dirProduction = '../docs/',
+      dirProduction = '../',
 
       root = isProduction ? dirProduction : dirDevelopment,
       

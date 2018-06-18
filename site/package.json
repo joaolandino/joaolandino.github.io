@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf docs && gulp build --env prod"
+    "build": "gulp build --env prod && rm -rf ../assets/css && rm -rf ../assets/js && rm -rf ../assets/scss"
   },
   "repository": {
     "type": "git",
