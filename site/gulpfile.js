@@ -42,7 +42,7 @@ gulp.task('scss', () => {
 
 gulp.task('sw', function(callback) {
   swPrecache.write(`${root}/service-worker.js`, {
-    staticFileGlobs: [root + '/**/*.{js,html,css,png,jpg,jpeg,gif,svg,eot,ttf,woff}'],
+    staticFileGlobs: [root + '*.html', root + '/assets/images/**/*.{png,jpg,jpeg,gif}'],
     stripPrefix: root
   }, callback);
 });
