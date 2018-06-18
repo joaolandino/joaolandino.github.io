@@ -15,7 +15,7 @@ const gulp = require('gulp'),
 var isProduction = args.env === 'prod';
 
 const dirDevelopment = 'src/',
-      dirProduction = 'prod/',
+      dirProduction = '../docs/',
 
       root = isProduction ? dirProduction : dirDevelopment,
       
@@ -140,4 +140,4 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('dev', ['scss', 'webserver', 'watch', 'sw']);
-gulp.task('build', sequence('scss', 'minify', 'inline', 'clean-build', 'imagemin', 'sw'));
+gulp.task('build', sequence('scss', 'minify', 'inline', 'imagemin', 'sw'));

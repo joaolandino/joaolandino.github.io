@@ -1,0 +1,25 @@
+p, span, a, li, h1, h2, h3, h4, h5, h6{
+  &.normal{
+    font-size: $normal-text-size;
+    @media screen and (max-width: 800px) {
+      font-size: $mobile-normal-text-size;
+    }
+  }
+  
+  &.medium{ font-size: $medium-text-size; }
+  &.small{ font-size: $small-text-size; }
+}
+
+ul.limited-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &.small{
+    max-height: 100px;
+  }
+}
+
+.point{
+  color: $blue-500;
+}

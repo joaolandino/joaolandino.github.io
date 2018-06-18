@@ -1,11 +1,12 @@
 
-// RESETS
 @import 'vars';
 @import 'resets';
 @import 'classes';
 
-// COMPONENTS
-@import 'buttons';
-
-// STRUCTURE
 @import 'page';
+
+@import 'lll-carousel';
+@import 'buttons';
+@import 'contact';
+@import 'abbreviation';
+@import 'tooltip';

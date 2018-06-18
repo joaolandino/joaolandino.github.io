@@ -1,0 +1,19 @@
+.abbreviation{
+  white-space: nowrap;
+
+  &:hover{
+    .abbreviation-text{
+      max-width: 500px;
+    }
+  }
+
+  .abbreviation-text{
+    width: auto;
+    max-width: 0;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+
+    transition: max-width .5s ease-in-out;
+  }
+} 

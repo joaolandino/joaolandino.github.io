@@ -1,0 +1,75 @@
+.lll-carousel{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+
+  .lll-carousel-content{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 30px;
+    scroll-behavior: smooth;
+
+    a{
+      text-decoration: none;
+    }
+
+    .lll-carousel-slide{
+      // width: 310px;
+      width: 355px;
+      margin: 0 $normal-space;
+      flex: 0 0 auto;
+
+      @media screen and (max-width: 460px) {
+        width: 260px;
+      }
+
+      &:first-of-type{ margin-left: 0; }
+      &:last-of-type{ margin-right: 0; }
+
+      figure{
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        background: $blue-50;
+
+        @media screen and (max-width: 460px) {
+          height: 150px;
+        }
+      }
+
+      h1, h2, h3{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: $small-space;
+      }
+
+      p{ line-height: 140%; }
+
+      .btn{
+        margin-top: 5px;
+        float: right;
+        color: $blue-500;
+      }
+    }
+  }
+}
+
+.lll-carousel-controls{
+  width: 40px;
+  height: 40px;
+
+  z-index: 1;
+
+  outline: none;
+}
+
+#portfolio{
+  .lll-carousel{ height: 275px; }
+}

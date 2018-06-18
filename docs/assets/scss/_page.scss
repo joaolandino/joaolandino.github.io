@@ -1,0 +1,116 @@
+#page{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .page-header{
+    width: 100%;
+    min-height: 80vh;
+    flex-grow: 1;
+
+    margin: 0px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    h1, p{
+      margin-top: 0;
+    }
+  }
+
+  .page-title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: $normal-space;
+  }
+
+  .page-article{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+    background: #fff;
+    margin: 0 auto;
+
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, z-index 0s linear .5s;
+
+    & > .page-article-banner{ margin-top: 70px; }
+
+    &>*{
+      transform: translateY(50px);
+      transition: transform .3s ease-in-out;
+
+      &:nth-of-type(1){ transition-delay: 0s; }
+      &:nth-of-type(2){ transition-delay: .1s; }
+      &:nth-of-type(3){ transition-delay: .2s; }
+      &:nth-of-type(4){ transition-delay: .3s; }
+      &:nth-of-type(4){ transition-delay: .4s; }
+    }
+
+    &.active{
+      z-index: 1;
+      opacity: 1;
+      transition: opacity .3s ease-in-out, z-index 0s linear 0s;
+
+      &>*{ transform: translateY(0px); }
+    }
+
+    .page-article-header{
+      width: 100%;
+      max-height: 70px;
+      display: flex;
+      padding: $normal-space;
+      position: fixed;
+      z-index: 1;
+    }
+
+    .page-article-text{
+      h2{
+        margin-bottom: $small-space;
+      }
+    }
+
+    .page-article-gallery{
+      background: #222;
+
+      img{
+        margin-bottom: $normal-space;
+      }
+    }
+  }
+
+  .page-article-banner{
+    width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+
+    &[data-background='light']{ background: $blue-50; }
+
+    img{
+      display: block;
+      margin: 0 auto;
+      padding: $big-space;
+    }
+  }
+
+  .content-medium,
+  .content-small,
+  .content-big{
+    width: 100%;
+    margin: 0 auto;
+
+    padding: $big-space;
+  }
+
+  .content-small{ max-width: 500px; }
+  .content-medium{ max-width: 800px; }
+  .content-big{ max-width: 1100px; }
+}
